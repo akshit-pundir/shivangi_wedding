@@ -1,0 +1,94 @@
+:root{--sand:#F3E9D8;--indigo:#1D2F5C;--gold:#C29A3E;--step:clamp(300px,38vw,500px)}
+*{box-sizing:border-box;margin:0}
+html.lenis{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{font-family:'Cormorant Garamond',serif;font-size:21px;color:var(--indigo);background:var(--sand);overflow-x:hidden}
+h1,h2,h3,.cin{font-family:'Cinzel',serif;font-weight:400;letter-spacing:.14em}
+.cin{text-transform:uppercase;font-size:.78rem}
+section{position:relative;padding:18vh 8vw}
+section.tight{padding:8vh 8vw 18vh}
+.sand{background:var(--sand);color:var(--indigo)}.indigo{background:var(--indigo);color:var(--sand)}
+.center{text-align:center}.gold{color:var(--gold)}
+.bar{position:fixed;top:0;left:0;right:0;height:3px;background:var(--gold);transform-origin:0 50%;z-index:9}
+.hero{min-height:100vh;display:grid;place-items:center;overflow:hidden;padding:0;text-align:center}
+.arch{position:absolute;bottom:0;left:50%;translate:-50% 0;height:94vh;color:var(--gold)}
+.hero-in{position:relative;display:grid;gap:1.6rem;padding:0 6vw}
+.hero h1{font-size:clamp(2.8rem,10vw,8rem);line-height:1.1}
+.mask{display:inline-block;overflow:hidden;padding:.1em 0;vertical-align:bottom}
+.amp{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.5em;margin:.2em 0}
+.scroll-hint{position:absolute;bottom:4vh}
+.big{font-size:clamp(1.6rem,3.6vw,3rem);line-height:1.35;max-width:22em;margin:3rem auto}
+.couple h2{font-size:clamp(2.4rem,8vw,6rem)}
+.parents{display:flex;gap:6vw;justify-content:center;flex-wrap:wrap;margin-top:4rem}
+.parents small{display:block;margin-bottom:.6rem}.parents p{font-size:1.5rem}
+.units{display:flex;justify-content:center;gap:2vw;margin-top:3rem}
+.unit{width:clamp(64px,19vw,190px)}
+.num{display:block;font-family:'Cinzel',serif;font-size:clamp(2.6rem,9vw,7rem);font-variant-numeric:tabular-nums;line-height:1.1}
+.hscroll{height:420vh;padding:0}
+.sticky{position:sticky;top:0;height:100vh;overflow:hidden;padding:9vh 0 0 8vw}
+.sticky h2{font-size:1.1rem;color:var(--gold);margin-bottom:4vh}
+.track{display:flex;width:calc(4 * var(--step))}
+.slot{width:var(--step);padding-right:32px}
+.card{height:64vh;border:1px solid var(--gold);border-radius:999px 999px 14px 14px;padding:16% 2rem 2rem;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center}
+.card h3{font-size:clamp(2rem,3.4vw,2.8rem)}.dress{font-size:.95rem;opacity:.9}
+.progress{position:absolute;left:8vw;right:8vw;bottom:5vh;height:1px;background:var(--gold);transform-origin:0 50%}
+.story{max-width:20em}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:4rem}
+.photo{aspect-ratio:3/4;position:relative;overflow:hidden;background:var(--indigo);border:1px solid var(--gold);border-radius:999px 999px 12px 12px;display:grid;place-items:center}
+.photo::before{content:'S & S';font-family:'Cinzel',serif;color:var(--gold)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.btn{display:inline-block;margin-top:2.5rem;padding:1rem 2.4rem;border:1px solid var(--gold);color:var(--sand);text-decoration:none;transition:background 1s,color 1s}
+.btn:hover{background:var(--gold);color:var(--indigo)}
+.indigo h2{font-size:clamp(1.8rem,5vw,3.6rem);margin-top:2rem}
+.sand h2.cin{font-size:clamp(1.6rem,4.6vw,3.2rem)}
+.sign{font-size:clamp(2.2rem,7vw,5rem);margin-top:5rem}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr);gap:16px}.units{gap:0}}
+
+/* ---- v2: phone-first overrides, gate, music ---- */
+body{overflow-x:hidden;overflow-x:clip;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+.hero{min-height:100vh;min-height:100svh}
+.arch{height:auto;width:min(96vw,calc(94svh * .667))}
+.hero h1{letter-spacing:.08em;font-size:clamp(2.4rem,11.5vw,8rem)}
+.hero-in .cin{font-size:clamp(.66rem,2.9vw,.8rem)}
+.sep{font-style:normal}
+.sticky{height:100vh;height:100svh}
+.card{height:min(64vh,560px);height:min(64svh,560px)}
+.parents{display:grid;grid-template-columns:1fr 1px 1fr;gap:4vw;align-items:start}
+.family{display:grid;gap:.5rem;justify-items:center}
+.family p{font-size:1.45rem;line-height:1.25}
+.family .and{font-style:italic;font-size:1.2rem}
+.vline{width:1px;min-height:56px;height:100%;background:var(--gold);justify-self:center}
+.gate{position:fixed;inset:0;z-index:30}
+.door{position:absolute;top:0;bottom:0;width:50.5%;background:var(--indigo)}
+.door.l{left:0}.door.r{right:0}
+.door::after{content:'';position:absolute;inset:3svh 3vw;border:1px solid var(--gold);opacity:.55}
+.gate-in{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:1.4rem;text-align:center;color:var(--sand);padding:0 8vw}
+.gate-names{font-size:clamp(2.2rem,11vw,5rem);line-height:1.15;letter-spacing:.08em}
+.gate-in em{opacity:.7;font-size:.95rem}
+button.btn{background:none;cursor:pointer;margin-top:.6rem;font-size:.78rem}
+.music{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:9;width:46px;height:46px;border-radius:50%;background:var(--indigo);border:1px solid var(--gold);display:flex;gap:3px;align-items:center;justify-content:center;cursor:pointer}
+.music i{display:block;width:2px;height:16px;background:var(--gold)}
+@media(max-width:700px){
+  body{font-size:19px}
+  section{padding:12vh 7vw}section.tight{padding:6vh 7vw 12vh}
+  .hero-in{gap:1.2rem}
+  .hero-in .cin span{display:block;margin-top:.35rem}.sep{display:none}
+  .parents{grid-template-columns:1fr;gap:1.6rem}
+  .unit small{font-size:.58rem;letter-spacing:.06em}
+  .sticky{padding-left:7vw}.progress{left:7vw;right:7vw}
+  .card{padding:22% 1.2rem 1.6rem}.dress{font-size:.88rem}
+  h2.cin{letter-spacing:.08em}
+  .music{right:12px}
+}
+
+/* ---- v3: gate gets its own look (sand + jaali, indigo seal) ---- */
+.door{background-color:var(--sand);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M24 0L48 24 24 48 0 24z' fill='none' stroke='%231D2F5C' stroke-opacity='.14'/%3E%3Ccircle cx='24' cy='24' r='3' fill='none' stroke='%23C29A3E' stroke-opacity='.55'/%3E%3C/svg%3E")}
+.door.l{box-shadow:1px 0 0 var(--gold)}.door.r{box-shadow:-1px 0 0 var(--gold)}
+.gate-in{color:var(--indigo);gap:1.8rem}
+.gate-in .tap{opacity:.8}
+.seal{position:relative;width:min(64vw,250px);aspect-ratio:1;background:none;border:0;cursor:pointer;display:grid;place-items:center;padding:0}
+.pulse{position:absolute;inset:14%;border:1px solid var(--gold);border-radius:50%}
+.ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.ring-text{font-family:'Cinzel',serif;font-size:13px;fill:var(--indigo)}
+.disc{position:relative;width:52%;aspect-ratio:1;border-radius:50%;background:var(--indigo);color:var(--gold);display:flex;align-items:center;justify-content:center;gap:.15em;box-shadow:0 0 0 5px var(--sand),0 0 0 6px var(--gold)}
+.disc b{font:400 clamp(1.5rem,7vw,2.2rem) 'Cinzel',serif}
+.disc i{font:italic 1.1rem 'Cormorant Garamond',serif}
